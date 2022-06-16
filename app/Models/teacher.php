@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\department;
-use App\Models\studentCourses;
+use App\Models\teacherCourses;
 
-class student extends Model
+class teacher extends Model
 {
     use HasFactory;
-    protected $table = 'student';
-    protected $primaryKey = 's_id';
+    protected $table = 'teacher';
+    protected $primaryKey = 't_id';
     public $incrementing = true;
     public $timeStamps = false;
     function department(){
@@ -19,6 +19,6 @@ class student extends Model
         return $this->belongsTo(department::class, 'department_id', 'department_id');
     }
     function courses(){
-        return $this->hasMany(studentCourses::class, 's_id', 's_id');
+        return $this->hasMany(studentCourses::class, 't_id', 't_id');
     }
 }

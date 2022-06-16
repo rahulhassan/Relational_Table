@@ -12,7 +12,7 @@ class teacherCourses extends Model
     protected $table = 'course_teachers';
     public $timeStamps = false;
 
-    function teacher1(){
+    function teachers(){
         return $this->hasMany(teacher::class, 't_id', 't_id');
     }
     function courses(){

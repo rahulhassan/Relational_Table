@@ -18,7 +18,7 @@ class teacher extends Model
         
         return $this->belongsTo(department::class, 'department_id', 'department_id');
     }
-    function courses(){
-        return $this->hasMany(studentCourses::class, 't_id', 't_id');
+    function techCourse(){
+        return $this->hasMany(teacherCourses::class, 't_id', 't_id');
     }
 }

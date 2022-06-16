@@ -13,7 +13,7 @@ class studentCourses extends Model
     protected $table = 'course_students';
     public $timeStamps = false;
 
-    function student1(){
+    function students(){
         return $this->hasMany(student::class, 's_id', 's_id');
     }
     function courses(){

@@ -17,10 +17,10 @@ class course extends Model
     function department(){
        return $this->belongsTo(department::class, 'department_id', 'department_id');
     }
-    function students(){
+    function stCourse(){
         return $this->hasMany(studentCourses::class, 'c_id', 'c_id');
     }
-    function teachers(){
+    function techCourse(){
         return $this->hasMany(teacherCourses::class, 'c_id', 'c_id');
     }
 }
